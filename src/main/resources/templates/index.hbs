@@ -1,0 +1,16 @@
+{{#partial "content"}}
+
+    <h1>WILDLIFE TRACKER APP</h1>
+    <hr>
+
+    <p>Our app enables Rangers to track wildlife</p>
+    <form action="/posts/new" method="POST">
+        <label for="content">Add animal</label>
+        <input id="content" name="content" type="text">
+
+        <button type="submit" class="btn btn-default">Add post</button>
+    </form>
+
+{{/partial}}
+
+{{> layout.hbs}}
