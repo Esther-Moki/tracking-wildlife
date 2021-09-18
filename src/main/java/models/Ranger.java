@@ -2,22 +2,19 @@ package models;
 
 public class Ranger {
     private String name;
-    private String location;
+    private String badge;
 
-    public Ranger(String name, String location) {
+    public Ranger(String name, String badge ){
         this.name = name;
-        this.location = location;
-    }
-
-    public Ranger() {
+        this.badge = badge;
     }
 
     public String getName() {
         return name;
     }
 
-    public String getLocation() {
-        return location;
+    public String getBadge() {
+        return badge;
     }
 
 }
