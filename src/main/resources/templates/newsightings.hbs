@@ -19,61 +19,7 @@
         <a href = "/" style=" margin-right: 5%;">Go back to homepage</a>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 {{/partial}}
 {{>layout.hbs}}
 
 
-    {{#partial "content"}}
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2"></div>
-                <div class="col-md-8">
-                    <form action="/superhero">
-                        <label for="heroName">Input Super hero's name</label>
-                        <input type="text" name="heroName" id="heroName" class="form-control">
-                        <label for="heroAge"> Input hero's Age</label>
-                        <input type="number" name="heroAge" id="heroAge" class="form-control">
-                        <label for="specialPower">Input hero's Special Powers</label>
-                        <select name="specialPower" id="specialPower" class="form-control">
-                            <option value=""></option>
-                            <option value="spiderman">Spiderman</option>
-                            <option value="ironman">Iron Man</option>
-                            <option value="storm woman">Storm Woman</option>
-
-                        </select><br>
-                        <label for="weakness">Input hero's Weakness</label>
-                        <select name="weakness" id="weakness" class="form-control">
-                            <option value=""></option>
-                            <option value="darkness">Darkness</option>
-                            <option value="storm">Storm</option>
-                            <option value="Light">Light</option>
-                            <option value="hurricanes">Hurricane</option>
-
-                        </select><br>
-                        <button type="submit" class="btn btn-warning"  style="font-weight: bold; color: black;">Submit</button>
-                    </form><br>
-                </div>
-                <div class="col-md-2"></div>
-            </div>
-        </div>
-        <a href = "/" style=" margin-right: 5%;">Go back to homepage</a>
-    {{/partial}}
-    {{> layout.hbs}}
