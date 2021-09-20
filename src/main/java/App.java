@@ -85,16 +85,18 @@ public class App {
             return new ModelAndView(model, "addAnimal.hbs");
         }, new HandlebarsTemplateEngine());
         //animalform
-        get("/sightinganimal", (request, response) -> {
+        get("/sightingendangered", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
-            return new ModelAndView(model, "addanimalform.hbs");
+            return new ModelAndView(model, "endangered.hbs");
         }, new HandlebarsTemplateEngine());
-        post("/successAnimal",(req,res)-> {
+        post("/successEndangered",(req,res)-> {
             Map<String, Object> model = new HashMap<>();
             String animalName = req.queryParams("animalName");
             model.put("animalName", animalName);
+            String animalAge = req.queryParams("animalAge");
+            model.put("animalAge", animalAge);
 
-            return new ModelAndView(model,"successAnimal.hbs");
+            return new ModelAndView(model,"successEndangered.hbs");
         },new HandlebarsTemplateEngine());
 
 
