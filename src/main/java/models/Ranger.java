@@ -1,5 +1,7 @@
 package models;
 
+import java.time.LocalDateTime;
+
 public class Ranger {
     private String name;
     private String badge;
@@ -15,7 +17,15 @@ public class Ranger {
 
     public String getBadge() {
         return badge;
+
     }
+//    public static ArrayList getAll(){
+//        return instances;
+//    }
+//    public LocalDateTime getCreatedAt() {
+//    return createdAt;
+//    }
+
 
 }
 

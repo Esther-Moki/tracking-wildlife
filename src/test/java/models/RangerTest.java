@@ -2,6 +2,8 @@ package models;
 
 import models.Ranger;
 import org.junit.Test;
+import java.time.LocalDateTime;
+
 
 import static org.junit.Assert.*;
 
@@ -23,4 +25,12 @@ public class RangerTest {
         Ranger ranger = new Ranger("Esther","badge");
         assertEquals("location", ranger.getBadge());
     }
+//    @Test
+//    public void getCreatedAt_instantiatesWithCurrentTime_today() throws Exception{
+//        Ranger animalSighting = new sightingAnimal();
+//        assertEquals(LocalDateTime.now().getDayOfWeek(),  animalSighting.getCreatedAt().getDayOfWeek());
+//    }
+//    public Ranger sightingAnimal(){
+//        return new Ranger("Esther");
+//    }
 }

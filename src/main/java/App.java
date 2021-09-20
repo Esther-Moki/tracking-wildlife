@@ -1,8 +1,10 @@
 
 
+import java.util.ArrayList;
 import java.util.Map;
 import java.util.HashMap;
 
+import models.Animal;
 import models.Ranger;
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
@@ -12,6 +14,34 @@ public class App {
     public static void main(String[] args) { //type “psvm + tab” to autocreate this :)
         staticFileLocation("/public");
 
+
+//        get("/", (request, response) -> {
+//            Map<String, Object> model = new HashMap<>();
+//            return new ModelAndView(model, "index.hbs");
+//        }, new HandlebarsTemplateEngine());
+         get("/", (request, response) -> {
+           Map<String, Object> model = new HashMap<>();
+             ArrayList<Animal> animal = Animal.getAll();
+             model.put("animal", animal);
+           return new ModelAndView(model, "index.hbs");
+      }, new HandlebarsTemplateEngine());
+
+        // Sighting form
+        get("/sighting", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            return new ModelAndView(model, "newsightings.hbs");
+        }, new HandlebarsTemplateEngine());
+        post("/successSightings",(req,res)-> {
+            Map<String, Object> model = new HashMap<>();
+            String animalType = req.queryParams("animalType");
+            String locationSpotted = req.queryParams("locationSpotted");
+            String rangerName = req.queryParams("rangerName");
+            model.put("animalType", animalType);
+            model.put("locationSpotted", locationSpotted);
+            model.put("rangerName", rangerName);
+
+            return new ModelAndView(model,"successSightings.hbs");
+        },new HandlebarsTemplateEngine());
 
 //        get("/", (req, res) -> {
 //            Map<String, Object> model = new HashMap<>();
@@ -29,10 +59,28 @@ public class App {
             return new ModelAndView(model, "successSightings.hbs");
         }, new HandlebarsTemplateEngine());
 
-//        get("/", (request, response) -> {
-//            Map<String, Object> model = new HashMap<String, Object>();
-//            return new ModelAndView(model, "index.hbs");
-//        }, new HandlebarsTemplateEngine());
+
+
+        //adding new animal whether endangered or not
+        get("/animalsgeneral", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            return new ModelAndView(model, "addAnimal.hbs");
+        }, new HandlebarsTemplateEngine());
+        //animalform
+        get("/sightinganimal", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            return new ModelAndView(model, "addanimalform.hbs");
+        }, new HandlebarsTemplateEngine());
+        post("/successAnimal",(req,res)-> {
+            Map<String, Object> model = new HashMap<>();
+            String animalName = req.queryParams("animalName");
+            model.put("animalName", animalName);
+
+            return new ModelAndView(model,"successAnimal.hbs");
+        },new HandlebarsTemplateEngine());
+
+
+
 
 //        post("/posts/new", (request, response) -> { //URL to make new post on POST route
 //            Map<String, Object> model = new HashMap<String, Object>();

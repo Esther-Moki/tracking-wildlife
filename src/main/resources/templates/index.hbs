@@ -1,9 +1,20 @@
 {{#partial "content"}}
 
-    <h1>Welcome to my Wildlife Tracker App</h1>
+    <h1 style="text-align: center;">Welcome to my Wildlife Tracker App</h1>
+    <h2 style="text-align: center;">Our app enables Rangers to track wildlife</h2>
+    <img src="/images/lions.jpeg" alt='A photo of elephants'>
     <hr>
 
-    <p>Our app enables Rangers to track wildlife</p>
+    {{#if animals}} <!--if posts exist, then -->
+    {{#each animal }} <!--loop-->
+    <p>Current animal:</p>
+    <p>{{ name }}</p> <!--show-->
+    {{/each}}
+    {{else}} <!--no posts!-->
+    <p>No animals!</p>
+    {{/if}}
+
+
 
 {{/partial}}
 
