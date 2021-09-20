@@ -33,12 +33,10 @@ public class App {
         }, new HandlebarsTemplateEngine());
         post("/successSightings",(req,res)-> {
             Map<String, Object> model = new HashMap<>();
-            String animalType = req.queryParams("animalType");
-            String locationSpotted = req.queryParams("locationSpotted");
-            String rangerName = req.queryParams("rangerName");
-            model.put("animalType", animalType);
-            model.put("locationSpotted", locationSpotted);
-            model.put("rangerName", rangerName);
+            String animalName = req.queryParams("animalName");
+            String animalAge = req.queryParams("animalAge");
+            model.put("animalName", animalName);
+            model.put("animalAge", animalAge);
 
             return new ModelAndView(model,"successSightings.hbs");
         },new HandlebarsTemplateEngine());
