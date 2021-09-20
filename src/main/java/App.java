@@ -91,10 +91,10 @@ public class App {
         }, new HandlebarsTemplateEngine());
         post("/successEndangered",(req,res)-> {
             Map<String, Object> model = new HashMap<>();
-            String animalName = req.queryParams("animalName");
-            model.put("animalName", animalName);
-            String animalAge = req.queryParams("animalAge");
-            model.put("animalAge", animalAge);
+            String animalNameEndangered = req.queryParams("animalNameEndangered");
+            model.put("animalNameEndangered}", animalNameEndangered);
+            String animalAgeEndangered = req.queryParams("animalAgeEndangered");
+            model.put("animalAgeEndangered", animalAgeEndangered);
 
             return new ModelAndView(model,"successEndangered.hbs");
         },new HandlebarsTemplateEngine());
