@@ -1,27 +1,34 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
-            <form action="/successEndangered" method="post">
-                <label for="animalNameEndangered">Animal's name</label>
-                <input type="text" name="animalNameEndangered" id="animalNameEndangered" class="form-control">
-                <label for="animalAgeEndangered">Animal's age</label>
-                <select name="animalAgeEndangered" id="animalAgeEndangered" class="form-control">
-                    <option value="">Select the animal's age</option>
-                    <option value="newborn">Newborn</option>
-                    <option value="young">Young</option>
-                    <option value="adult">Adult</option>
-                </select><br>
-                <label for="animalHealth">Animal's health</label>
-                <select name="animalHealth" id="animalHealth" class="form-control">
-                    <option value="">Select the animal's health</option>
-                    <option value="healthy">Healthy</option>
-                    <option value="ill">Ill</option>
-                    <option value="okay">Okay</option>
-                </select><br>
-                <button type="submit" class="btn btn-warning">Add endangered animal</button>
-            </form>
+{{#partial "content"}}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <form action="/successEndangered" method="post">
+                    <label for="animalNameEndangered">Animal's name</label>
+                    <input type="text" name="animalNameEndangered" id="animalNameEndangered" class="form-control">
+                    <label for="animalAgeEndangered">Animal's age</label>
+                    <select name="animalAgeEndangered" id="animalAgeEndangered" class="form-control">
+                        <option value="">Select the animal's age</option>
+                        <option value="newborn">Newborn</option>
+                        <option value="young">Young</option>
+                        <option value="adult">Adult</option>
+                    </select><br>
+                    <label for="animalHealth">Animal's health</label>
+                    <select name="animalHealth" id="animalHealth" class="form-control">
+                        <option value="">Select the animal's health</option>
+                        <option value="healthy">Healthy</option>
+                        <option value="ill">Ill</option>
+                        <option value="okay">Okay</option>
+                    </select><br>
+                    <button type="submit" class="btn btn-warning">Add endangered animal</button>
+                </form>
+            </div>
+            <div class="col-md-2"></div>
         </div>
-        <div class="col-md-2"></div>
     </div>
-</div>
+
+    <a href = "/" style=" margin-right: 5%;">Go back to homepage</a>
+
+{{/partial}}
+{{>layout.hbs}}
