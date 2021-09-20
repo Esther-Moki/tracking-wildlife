@@ -79,6 +79,25 @@ public class App {
             return new ModelAndView(model,"successAnimal.hbs");
         },new HandlebarsTemplateEngine());
 
+        //for endangered animals
+        get("/animalsgeneral", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            return new ModelAndView(model, "addAnimal.hbs");
+        }, new HandlebarsTemplateEngine());
+        //animalform
+        get("/sightinganimal", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            return new ModelAndView(model, "addanimalform.hbs");
+        }, new HandlebarsTemplateEngine());
+        post("/successAnimal",(req,res)-> {
+            Map<String, Object> model = new HashMap<>();
+            String animalName = req.queryParams("animalName");
+            model.put("animalName", animalName);
+
+            return new ModelAndView(model,"successAnimal.hbs");
+        },new HandlebarsTemplateEngine());
+
+
 
 
 
