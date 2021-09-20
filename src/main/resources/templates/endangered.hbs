@@ -5,21 +5,19 @@
             <form action="/successEndangered" method="post">
                 <label for="animalName">Animal's name</label>
                 <input type="text" name="animalName" id="animalName" class="form-control">
-                <label for="badgeNumber">Animal's age</label>
-                <input type="text" name="animalAge" id="animalAge" class="form-control">
-                <label for="animalName">Animal's health</label>
-                <select name="animalName" id="animalName" class="form-control">
-                    <option value="">Select the animal's health</option>
-                    <option value="healthy">Healthy</option>
-                    <option value="ill">Ill</option>
-                    <option value="okay">Okay</option>
-                </select><br>
                 <label for="animalAgeEndangered">Animal's age</label>
                 <select name="animalAgeEndangered" id="animalAgeEndangered" class="form-control">
                     <option value="">Select the animal's age</option>
                     <option value="newborn">Newborn</option>
                     <option value="young">Young</option>
                     <option value="adult">Adult</option>
+                </select><br>
+                <label for="animalName">Animal's health</label>
+                <select name="animalName" id="animalName" class="form-control">
+                    <option value="">Select the animal's health</option>
+                    <option value="healthy">Healthy</option>
+                    <option value="ill">Ill</option>
+                    <option value="okay">Okay</option>
                 </select><br>
                 <button type="submit" class="btn btn-warning">Add endangered animal</button>
             </form>
