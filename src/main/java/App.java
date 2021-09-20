@@ -95,6 +95,8 @@ public class App {
             model.put("animalNameEndangered}", animalNameEndangered);
             String animalAgeEndangered = req.queryParams("animalAgeEndangered");
             model.put("animalAgeEndangered", animalAgeEndangered);
+            String animalHealth = req.queryParams("animalHealth");
+            model.put("animalHealth", animalHealth);
 
             return new ModelAndView(model,"successEndangered.hbs");
         },new HandlebarsTemplateEngine());
