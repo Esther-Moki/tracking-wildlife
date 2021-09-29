@@ -4,27 +4,33 @@
         <div class="row">
             <div class="col-md-3"></div>
             <div class="col-md-6">
-                <form action="/successSightings" method="post">
+                <form action="/allAnimals/new" method="post">
                     <label for="animalType">Animal type</label>
                     <select name="animalType" id="animalType" class="form-control">
                         <option value=""></option>
                         <option value="animal">Animal</option>
-                        <option value="endangeredAnimal">Endangered Animal</option>
+                        <option value="animal">Endangered Animal</option>
                     </select><br>
-<!--                    <input type="text" name="animalType" id="animalType" class="form-control">-->
                     <label for="locationSpotted">Location Spotted</label>
-                    <input type="text" name="locationSpotted" id="locationSpotted" class="form-control">
+                    <select name="locationSpotted" id="locationSpotted" class="form-control">
+                        <option value="locationSpotted"></option>
+                        <option value="locationSpotted">River Banks</option>
+                        <option value="locationSpotted">Uptown Forest</option>
+                    </select><br>
                     <label for="rangerName">Name of the ranger</label>
-                    <input type="text" name="rangerName" id="rangerName" class="form-control"><br>
+                    <select name="rangerName" id="rangerName" class="form-control">
+                        <option value=""></option>
+                        <option value="Esther Moki">Esther Moki</option>
+                        <option value="Jon Snow">Jon Snow</option>
+                    </select><br>
 
                     <button type="submit" class="btn btn-warning">Add new animal sighted</button>
                 </form>
             </div>
             <div class="col-md-3"></div>
         </div>
-        <a href = "/" style=" margin-right: 5%;">Go back to homepage</a>
     </div>
-
+    <a href = "/" style=" margin-right: 5%;">Go back to homepage</a>
 {{/partial}}
 {{>layout.hbs}}
 

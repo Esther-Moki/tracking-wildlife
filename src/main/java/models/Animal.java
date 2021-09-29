@@ -1,30 +1,73 @@
 package models;
 
 import org.sql2o.*;
+
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.ArrayList;
 import java.sql.Timestamp;
 
-public class Animal extends AnimalsAbstract {
-    private static ArrayList<Animal> instances = new ArrayList<>();
+public class Animal extends ArrayList<Animal> {
+    public String name;
+    public String age;
+    private int id;
+    private static ArrayList<Animal> instances = new ArrayList<Animal>();
+    // private final boolean published;
+    // private final LocalDateTime createdAt;
 
-    //public Animal(String name) {
-        //this.name = name;
-    //}
 
-    public Animal(String name) {
+    public Animal(String name, String age) {
         this.name = name;
+        this.age = age;
         instances.add(this);
+        this.id = instances.size();
+    }
+
+
+    public String getName(String name) {
+
+        return name;
+    }
+
+    public String getAge(String age) {
+        return age;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public static ArrayList<Animal> getAll() {
+
         return instances;
     }
 
     public void setName(String name) {
         this.name = name;
     }
+
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+    public void setId(int id) {
+        this.id = instances.size();
+    }
 }
+
+
+
+
+
+//    public boolean getPublished(){ //new too
+//        return this.published;
+//    }
+//    public LocalDateTime getCreatedAt() {
+//        return createdAt;
+//    }
+
+//
+
 
     // overriding Animal
 //    @Override

@@ -1,24 +1,24 @@
-package models;
-
-import java.time.LocalDateTime;
-
-public class Ranger {
-    private String name;
-    private String badge;
-
-    public Ranger(String name, String badge ){
-        this.name = name;
-        this.badge = badge;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getBadge() {
-        return badge;
-
-    }
+//package models;
+//
+//import java.time.LocalDateTime;
+//
+//public class Ranger {
+//    private String name;
+//    private String badge;
+//
+//    public Ranger(String name, String badge ){
+//        this.name = name;
+//        this.badge = badge;
+//    }
+//
+//    public String getName() {
+//        return name;
+//    }
+//
+//    public String getBadge() {
+//        return badge;
+//
+//    }
 //    public static ArrayList getAll(){
 //        return instances;
 //    }
@@ -27,7 +27,7 @@ public class Ranger {
 //    }
 
 
-}
+//}
 
 //public class Ranger {
 //    private String content;

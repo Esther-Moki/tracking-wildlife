@@ -2,20 +2,51 @@
 
     <h1 style="text-align: center;">Welcome to my Wildlife Tracker App</h1>
     <h2 style="text-align: center;">Our app enables Rangers to track wildlife</h2>
-    <img src="/images/lions.jpeg" alt='A photo of elephants'>
+    <img src="/images/lions.jpeg" alt='A photo of elephants'  style="text-align: center";>
     <hr>
 
-    {{#if animals}} <!--if posts exist, then -->
-    {{#each animal }} <!--loop-->
-    <p>Current animal:</p>
-    <p>{{ name }}</p> <!--show-->
-    {{/each}}
-    {{else}} <!--no posts!-->
-    <p>No animals!</p>
+
+    <h1>Animal list</h1>
+    {{#if animals}}
+        {{#each animals}} <!--loop-->
+        <p>Current added animal:</p>
+        <p>{{ animalName }}</p>
+        <p>{{ animalAge }}</p>
+        <p>{{ id }}</p>
+        {{/each}}
+    {{else}}
+        <p>No animals added.</p>
     {{/if}}
 
 
+    <h1>Endangered list</h1>
+    {{#if endangered}}
+       {{#each endangered }}
+    <p>Current endangered animal sighted:</p>
+          <p>{{ animalNameEndangered }}</p>
+          <p>{{ animalAgeEndangered}}</p>
+          <p>{{ animalHealth}}</p>
+          <p>{{ id }}</p>
+       {{/each}}
+    {{else}}
+        <p>No new sightings for endangered animals.</p>
+    {{/if}}
+
+
+    <h1>Sighting list</h1>
+       {{#if sightings}}-->
+       {{#each sightings }}
+          <p>Current animal sighted:</p>
+            <p>{{ animalType }}</p>
+           <p>{{ locationSpotted}}</p>
+           <p>{{ rangerName }}</p>
+       {{/each}}
+       {{else}}
+        <p>No new sightings.</p>
+       {{/if}}
 
 {{/partial}}
 
 {{> layout.hbs}}
+
+
